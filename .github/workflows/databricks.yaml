@@ -1,11 +1,9 @@
 name: databricks-cicd
 
-# Trigger this workflow whenever a pull request is opened against the repo's
-# main branch or an existing pull request's head branch is updated.
 on:
-  pull_request:
-    branches:
-      - main
+  push:
+    branches: [main]
+
 
 jobs:
   main:
