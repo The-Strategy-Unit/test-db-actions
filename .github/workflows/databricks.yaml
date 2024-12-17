@@ -4,9 +4,6 @@ name: databricks-cicd
 # main branch or an existing pull request's head branch is updated.
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
     branches:
       - main
 
