@@ -1,11 +1,21 @@
 name: databricks-cicd
-...
+
+# Trigger this workflow whenever a pull request is opened against the repo's
+# main branch or an existing pull request's head branch is updated.
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    branches:
+      - main
+
 jobs:
   main:
     runs-on: ubuntu-latest
     # Name of the environment you created
     environment: test
-    ...
+    
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
